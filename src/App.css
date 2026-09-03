@@ -136,6 +136,12 @@ h1.title {
   font-size: 14px;
 }
 
+.format-hint {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .error {
   color: var(--wine);
   font-size: 14px;
@@ -528,7 +534,12 @@ select {
   .whatif-controls,
   .whatif-stats,
   .p-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr auto;
+  }
+
+  .p-row .p-track {
+    grid-column: 1 / -1;
+    order: 3;
   }
 
   .landing-card {

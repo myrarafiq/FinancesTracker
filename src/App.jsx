@@ -143,7 +143,9 @@ export default function App() {
                 setActivePreset('')
               }}
               aria-label="Expense list"
+              placeholder={'$8 coffee\n$14 lunch\n$6 subway'}
             />
+            <p className="format-hint">One expense per line — amount plus a short description.</p>
             <div className="presets">
               {[
                 ['default', 'Sample week'],
