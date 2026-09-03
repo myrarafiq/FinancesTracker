@@ -7,6 +7,7 @@ import {
   formatMoneyExact,
 } from './analyze'
 import './App.css'
+import { Analytics } from '@vercel/analytics/react'
 
 function DonutChart({ slices, total }) {
   const radius = 70
@@ -114,13 +115,16 @@ export default function App() {
 
   if (phase === 'judging') {
     return (
-      <div className="judging">
-        <div>
-          <p className="eyebrow">Hold on</p>
-          <h2 className="dots">Judging your decisions</h2>
-          <p className="whisper">Crunching receipts, sipping tea, raising one eyebrow.</p>
+      <>
+        <div className="judging">
+          <div>
+            <p className="eyebrow">Hold on</p>
+            <h2 className="dots">Judging your decisions</h2>
+            <p className="whisper">Crunching receipts, sipping tea, raising one eyebrow.</p>
+          </div>
         </div>
-      </div>
+        <Analytics />
+      </>
     )
   }
 
@@ -172,6 +176,7 @@ export default function App() {
             </div>
           </div>
         </section>
+        <Analytics />
       </main>
     )
   }
@@ -411,6 +416,7 @@ export default function App() {
           )}
         </section>
       </section>
+      <Analytics />
     </main>
   )
 }
