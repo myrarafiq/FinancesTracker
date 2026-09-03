@@ -434,6 +434,11 @@ select {
   color: var(--ink);
 }
 
+input[type='range'] {
+  accent-color: var(--coral);
+  height: 28px;
+}
+
 .whatif-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
